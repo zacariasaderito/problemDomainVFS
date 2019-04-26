@@ -1,26 +1,15 @@
 package cput.ac.za.problemDomain.Domain;
 
-import java.util.*;
 
-/**
- * 
- */
 public class Trial {
 
-    /**
-     * Default constructor
-     */
+    private int requestNumber;
+    private String veredict;
+
+
+    //  Default constructor
     public Trial() {
     }
 
-    /**
-     * 
-     */
-    private int requestNumber;
-
-    /**
-     * 
-     */
-    private String veredict;
 
 }

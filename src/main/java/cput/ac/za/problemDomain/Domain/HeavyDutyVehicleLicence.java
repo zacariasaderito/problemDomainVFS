@@ -2,13 +2,15 @@ package cput.ac.za.problemDomain.Domain;
 
 public class HeavyDutyVehicleLicence extends Licence {
 
-    public HeavyDutyVehicleLicence() {
-    }
-
-    public HeavyDutyVehicleLicence(int licenseNumber, String type) {
-        super(licenseNumber, type);
+    //  Default constructor
+    public HeavyDutyVehicleLicence(String type) {
+        super(type);
 
     }
 
+    public void showLicence()
+    {
+        System.out.println("Licence for HEAVY DUTY VEHICLE");
+    }
 
 }

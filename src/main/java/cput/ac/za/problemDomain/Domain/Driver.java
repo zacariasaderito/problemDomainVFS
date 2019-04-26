@@ -2,6 +2,7 @@ package cput.ac.za.problemDomain.Domain;
 
 import cput.ac.za.problemDomain.Factory.LicenseFactory;
 
+
 public class Driver {
 
     private int id;
@@ -14,13 +15,12 @@ public class Driver {
     public Licence getLicence(String type)
     {
         licence = LicenseFactory.createLicense(type);
-
         return licence;
     }
 
     public void commitViolence()
     {
-        System.out.println(toString());
+
     }
 
     @Override
@@ -34,4 +34,5 @@ public class Driver {
                 ", licence=" + licence +
                 '}';
     }
+
 }

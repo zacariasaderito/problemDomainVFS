@@ -1,19 +1,31 @@
 package cput.ac.za.problemDomain.Domain;
 
+import java.util.Random;
+
 public abstract class Licence {
 
 
     private int licenseNumber;
     private String type;
 
-    public Licence() {
+    private int getLicenseNumber()
+    {
+        Random random = new Random();
 
+        licenseNumber = random.nextInt(89999) + 10000;
+
+        return licenseNumber;
     }
 
 
-    public Licence(int licenseNumber, String type) {
-        this.licenseNumber = licenseNumber;
+    //  Default constructor
+    public Licence(String type) {
+        licenseNumber = getLicenseNumber();
         this.type = type;
+    }
+
+    public void showLicence()
+    {
     }
 
     @Override

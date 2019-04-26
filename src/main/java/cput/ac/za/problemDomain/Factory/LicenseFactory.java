@@ -10,13 +10,13 @@ public class LicenseFactory {
 
 
         if(type.equals("car"))
-            licence = new CarLicense(123456, "CAR");
+            licence = new CarLicense("CAR");
         else if (type.equals("taxi"))
-            licence = new TaxiLicense(234567, "TAXI");
+            licence = new TaxiLicense("TAXI");
         else if (type.equals("heavy"))
-            licence = new HeavyDutyVehicleLicence(345678, "HEAVY DUTE");
+            licence = new HeavyDutyVehicleLicence("HEAVY DUTY");
         else if (type.equals("moto"))
-            licence = new MotobikeLicense(012345, "MOTOBIKE");
+            licence = new MotobikeLicense("MOTOBIKE");
 
         return licence;
 

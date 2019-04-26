@@ -18,7 +18,7 @@ public class AppTest
     @Test
     public void shouldAnswerWithTrue()
     {
-        Vehicle v = VehicleFactory.getVehicle("asd", new Driver(), "blew", "asd");
+        Vehicle v = VehicleFactory.createVehicle("car");
         assertTrue( true );
     }
 

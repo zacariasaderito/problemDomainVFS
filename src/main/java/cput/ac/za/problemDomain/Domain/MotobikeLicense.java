@@ -2,12 +2,15 @@ package cput.ac.za.problemDomain.Domain;
 
 public class MotobikeLicense extends Licence {
 
-    public MotobikeLicense() {
+    //  Default constructor
+    public MotobikeLicense(String type) {
+        super(type);
     }
 
-    public MotobikeLicense(int licenseNumber, String type) {
-        super(licenseNumber, type);
-
-
+    public void showLicence()
+    {
+        System.out.println("Licence for MOTOBIKE");
     }
+
+
 }

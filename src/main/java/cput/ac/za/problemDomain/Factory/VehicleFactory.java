@@ -1,18 +1,26 @@
 package cput.ac.za.problemDomain.Factory;
 
-import cput.ac.za.problemDomain.Build;
-import cput.ac.za.problemDomain.Domain.Driver;
-import cput.ac.za.problemDomain.Domain.Vehicle;
+import cput.ac.za.problemDomain.Domain.*;
 
 public class VehicleFactory {
 
-    public static Vehicle getVehicle(String category, Driver owner, String colour, String manufacturer) {
-        return new Vehicle.Builder().plateNumber(Build.generateId().toString())
-                .category(category)
-                .owner(owner)
-                .colour(colour)
-                .manufacturer(manufacturer)
-                .build();
+    public static Vehicle createVehicle(String category) {
+
+        Vehicle vehicle = null;
+
+        if(category.equals("car"))
+            vehicle = new Car("CAR");
+        else if (category.equals("taxi"))
+            vehicle = new Taxi("TAXI");
+        else if (category.equals("heavy"))
+            vehicle = new HeavyDutyVehicle("HEAVY DUTY");
+        else if (category.equals("moto"))
+            vehicle = new Motobike("MOTOBIKE");
+
+
+        return vehicle;
+
     }
 }
+
 

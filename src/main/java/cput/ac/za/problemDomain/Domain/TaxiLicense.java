@@ -1,12 +1,17 @@
 package cput.ac.za.problemDomain.Domain;
 
+
 public class TaxiLicense extends Licence {
 
-    public TaxiLicense() {
+    //  Default constructor
+    public TaxiLicense(String type) {
+        super(type);
     }
 
-    public TaxiLicense(int licenseNumber, String type) {
-        super(licenseNumber, type);
-
+    public void showLicence()
+    {
+        System.out.println("Licence for TAXI");
     }
+
+
 }

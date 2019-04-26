@@ -2,30 +2,17 @@ package cput.ac.za.problemDomain.Domain;
 
 import java.util.*;
 
-/**
- * 
- */
+
 public class Ticket {
 
-    /**
-     * Default constructor
-     */
+    private int ticketNumber;
+    private String violetion;
+    private Date date;
+
+
+    //  Default constructor
     public Ticket() {
     }
 
-    /**
-     * 
-     */
-    private int ticketNumber;
-
-    /**
-     * 
-     */
-    private String violetion;
-
-    /**
-     * 
-     */
-    private Date date;
 
 }
