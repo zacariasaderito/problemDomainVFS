@@ -1,6 +1,6 @@
 package cput.ac.za.problemDomain;
 
-import cput.ac.za.problemDomain.Domain.Driver;
+import cput.ac.za.problemDomain.domain.Driver;
 
 /**
  * Hello world!
@@ -20,5 +20,9 @@ public class App
 
 
 
+    }
+
+    public void c(){
+        Driver d = new Driver();
     }
 }

@@ -1,4 +1,4 @@
-package cput.ac.za.problemDomain.Domain;
+package cput.ac.za.problemDomain.domain;
 
 
 public class Trial {

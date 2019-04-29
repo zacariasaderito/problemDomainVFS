@@ -1,6 +1,6 @@
-package cput.ac.za.problemDomain.Factory;
+package cput.ac.za.problemDomain.factory;
 
-import cput.ac.za.problemDomain.Domain.*;
+import cput.ac.za.problemDomain.domain.*;
 
 public class LicenseFactory {
 

@@ -1,6 +1,4 @@
-package cput.ac.za.problemDomain.Domain;
-
-import java.util.*;
+package cput.ac.za.problemDomain.domain;
 
 public class Major {
 

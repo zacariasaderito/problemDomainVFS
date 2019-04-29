@@ -1,7 +1,4 @@
-package cput.ac.za.problemDomain.Domain;
-
-import cput.ac.za.problemDomain.Build;
-import javafx.util.Builder;
+package cput.ac.za.problemDomain.domain;
 
 
 public abstract class Vehicle {

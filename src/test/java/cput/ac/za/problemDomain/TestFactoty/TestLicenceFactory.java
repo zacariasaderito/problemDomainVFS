@@ -1,7 +1,7 @@
 package cput.ac.za.problemDomain.TestFactoty;
 
-import cput.ac.za.problemDomain.Domain.Licence;
-import cput.ac.za.problemDomain.Factory.LicenseFactory;
+import cput.ac.za.problemDomain.domain.Licence;
+import cput.ac.za.problemDomain.factory.LicenseFactory;
 import org.junit.Test;
 
 public class TestLicenceFactory {
@@ -9,7 +9,7 @@ public class TestLicenceFactory {
     @Test
     public void createLicence()
     {
-        Licence licence = LicenseFactory.createLicense("moto");
+        Licence licence = LicenseFactory.createLicense("car");
 
         licence.showLicence();
     }

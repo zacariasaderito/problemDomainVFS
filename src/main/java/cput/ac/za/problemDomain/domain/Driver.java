@@ -1,6 +1,6 @@
-package cput.ac.za.problemDomain.Domain;
+package cput.ac.za.problemDomain.domain;
 
-import cput.ac.za.problemDomain.Factory.LicenseFactory;
+import cput.ac.za.problemDomain.factory.LicenseFactory;
 
 
 public class Driver {
