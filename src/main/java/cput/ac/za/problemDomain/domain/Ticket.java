@@ -36,6 +36,7 @@ public class Ticket {
         return date;
     }
 
+
     public static class Builder
     {
         private String ticketNumber;
