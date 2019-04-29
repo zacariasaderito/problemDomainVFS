@@ -1,6 +1,6 @@
 package cput.ac.za.problemDomain.factory;
 
-import cput.ac.za.problemDomain.domain.Fine;
+import cput.ac.za.problemDomain.domain.feature.Fine;
 import cput.ac.za.problemDomain.util.GenID;
 
 import java.util.Date;

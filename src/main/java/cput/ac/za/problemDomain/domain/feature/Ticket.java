@@ -1,6 +1,4 @@
-package cput.ac.za.problemDomain.domain;
-
-import javafx.util.Builder;
+package cput.ac.za.problemDomain.domain.feature;
 
 import java.util.*;
 

@@ -1,6 +1,6 @@
 package cput.ac.za.problemDomain.factory;
 
-import cput.ac.za.problemDomain.domain.Trial;
+import cput.ac.za.problemDomain.domain.feature.Trial;
 import cput.ac.za.problemDomain.util.GenID;
 
 public class TrialFactory {

@@ -1,5 +1,6 @@
-package cput.ac.za.problemDomain.domain;
+package cput.ac.za.problemDomain.domain.person;
 
+import cput.ac.za.problemDomain.domain.document.Licence;
 import cput.ac.za.problemDomain.factory.LicenseFactory;
 
 

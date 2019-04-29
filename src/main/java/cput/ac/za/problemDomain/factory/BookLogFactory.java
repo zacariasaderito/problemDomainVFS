@@ -1,6 +1,6 @@
 package cput.ac.za.problemDomain.factory;
 
-import cput.ac.za.problemDomain.domain.BookLog;
+import cput.ac.za.problemDomain.domain.feature.BookLog;
 import cput.ac.za.problemDomain.util.GenID;
 
 public class BookLogFactory {

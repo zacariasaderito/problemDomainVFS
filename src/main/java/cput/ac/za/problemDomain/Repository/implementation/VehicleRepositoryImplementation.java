@@ -1,7 +1,7 @@
 package cput.ac.za.problemDomain.Repository.implementation;
 
 import cput.ac.za.problemDomain.Repository.VehicleRepository;
-import cput.ac.za.problemDomain.domain.Vehicle;
+import cput.ac.za.problemDomain.domain.transport.Vehicle;
 
 import java.util.HashSet;
 import java.util.Set;

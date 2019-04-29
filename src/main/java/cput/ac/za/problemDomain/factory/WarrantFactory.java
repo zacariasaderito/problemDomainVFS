@@ -1,7 +1,7 @@
 package cput.ac.za.problemDomain.factory;
 
-import cput.ac.za.problemDomain.domain.Driver;
-import cput.ac.za.problemDomain.domain.Warrant;
+import cput.ac.za.problemDomain.domain.person.Driver;
+import cput.ac.za.problemDomain.domain.feature.Warrant;
 import cput.ac.za.problemDomain.util.GenID;
 
 import java.util.Date;

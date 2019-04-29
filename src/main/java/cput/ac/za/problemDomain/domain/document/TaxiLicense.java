@@ -1,4 +1,4 @@
-package cput.ac.za.problemDomain.domain;
+package cput.ac.za.problemDomain.domain.document;
 
 
 public class TaxiLicense extends Licence {

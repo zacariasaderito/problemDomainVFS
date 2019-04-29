@@ -1,4 +1,6 @@
-package cput.ac.za.problemDomain.domain;
+package cput.ac.za.problemDomain.domain.transport;
+
+import cput.ac.za.problemDomain.domain.person.Driver;
 
 public class Motobike extends Vehicle {
 

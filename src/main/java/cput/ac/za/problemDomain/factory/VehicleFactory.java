@@ -1,6 +1,6 @@
 package cput.ac.za.problemDomain.factory;
 
-import cput.ac.za.problemDomain.domain.*;
+import cput.ac.za.problemDomain.domain.transport.*;
 
 public class VehicleFactory {
 

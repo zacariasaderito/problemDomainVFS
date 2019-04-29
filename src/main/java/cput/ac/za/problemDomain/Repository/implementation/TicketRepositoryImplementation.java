@@ -1,7 +1,7 @@
 package cput.ac.za.problemDomain.Repository.implementation;
 
 import cput.ac.za.problemDomain.Repository.TicketRepository;
-import cput.ac.za.problemDomain.domain.Ticket;
+import cput.ac.za.problemDomain.domain.feature.Ticket;
 
 import java.util.HashSet;
 import java.util.Set;

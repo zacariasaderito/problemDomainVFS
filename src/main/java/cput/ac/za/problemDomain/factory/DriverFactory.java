@@ -1,6 +1,6 @@
 package cput.ac.za.problemDomain.factory;
 
-import cput.ac.za.problemDomain.domain.Driver;
+import cput.ac.za.problemDomain.domain.person.Driver;
 import cput.ac.za.problemDomain.util.GenID;
 
 public class DriverFactory {

@@ -1,6 +1,6 @@
 package cput.ac.za.problemDomain.factory;
 
-import cput.ac.za.problemDomain.domain.*;
+import cput.ac.za.problemDomain.domain.document.*;
 
 public class LicenseFactory {
 

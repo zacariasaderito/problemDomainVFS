@@ -1,6 +1,6 @@
 package cput.ac.za.problemDomain.factory;
 
-import cput.ac.za.problemDomain.domain.Ticket;
+import cput.ac.za.problemDomain.domain.feature.Ticket;
 import cput.ac.za.problemDomain.util.GenID;
 
 import java.util.Date;

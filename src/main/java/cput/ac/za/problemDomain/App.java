@@ -1,6 +1,6 @@
 package cput.ac.za.problemDomain;
 
-import cput.ac.za.problemDomain.domain.Driver;
+import cput.ac.za.problemDomain.domain.person.Driver;
 
 /**
  * Hello world!

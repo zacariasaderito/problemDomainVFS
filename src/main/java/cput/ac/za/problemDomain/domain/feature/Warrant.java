@@ -1,5 +1,7 @@
-package cput.ac.za.problemDomain.domain;
+package cput.ac.za.problemDomain.domain.feature;
 
+
+import cput.ac.za.problemDomain.domain.person.Driver;
 
 import java.util.Date;
 

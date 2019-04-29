@@ -1,6 +1,6 @@
 package cput.ac.za.problemDomain.factory;
 
-import cput.ac.za.problemDomain.domain.Officer;
+import cput.ac.za.problemDomain.domain.person.Officer;
 import cput.ac.za.problemDomain.util.GenID;
 
 public class OfficerFactory {

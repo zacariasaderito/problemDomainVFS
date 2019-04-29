@@ -1,6 +1,6 @@
 package cput.ac.za.problemDomain.TestFactoty;
 
-import cput.ac.za.problemDomain.domain.Vehicle;
+import cput.ac.za.problemDomain.domain.transport.Vehicle;
 import cput.ac.za.problemDomain.factory.VehicleFactory;
 import org.junit.Test;
 
