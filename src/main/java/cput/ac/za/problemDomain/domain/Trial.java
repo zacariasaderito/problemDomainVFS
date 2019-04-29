@@ -3,13 +3,54 @@ package cput.ac.za.problemDomain.domain;
 
 public class Trial {
 
-    private int requestNumber;
+    private String requestNumber;
     private String veredict;
 
 
     //  Default constructor
-    public Trial() {
+    private Trial() {
     }
 
+    private Trial(Builder builder)
+    {
+        this.requestNumber = builder.requestNumber;
+        this.veredict = builder.veredict;
+    }
+
+
+    public String getRequestNumber() {
+        return requestNumber;
+    }
+
+    public String getVeredict() {
+        return veredict;
+    }
+
+
+    public static class Builder
+    {
+        private String requestNumber;
+        private String veredict;
+
+
+        public Builder requestNumber(String requestNumber)
+        {
+            this.requestNumber = requestNumber;
+            return this;
+        }
+
+        public Builder veredict(String veredict)
+        {
+            this.veredict = veredict;
+            return this;
+        }
+
+        public Trial build()
+        {
+            return new Trial(this);
+        }
+
+
+    }
 
 }

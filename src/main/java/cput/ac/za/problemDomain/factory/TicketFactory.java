@@ -9,7 +9,8 @@ public class TicketFactory {
 
     public static Ticket getTicket(String violation, Date date)
     {
-        return new Ticket.Builder().ticketNumber(GenID.generateId())
+        return new Ticket.Builder()
+                .ticketNumber(GenID.generateId())
                 .violation(violation)
                 .date(date)
                 .build();
