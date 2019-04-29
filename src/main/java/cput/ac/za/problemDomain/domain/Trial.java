@@ -17,7 +17,7 @@ public class Trial {
         this.veredict = builder.veredict;
     }
 
-
+//  Getters
     public String getRequestNumber() {
         return requestNumber;
     }
@@ -26,7 +26,7 @@ public class Trial {
         return veredict;
     }
 
-
+//    Builder
     public static class Builder
     {
         private String requestNumber;
