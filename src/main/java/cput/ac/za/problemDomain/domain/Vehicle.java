@@ -37,6 +37,26 @@ public abstract class Vehicle {
         return manufacturer;
     }
 
+    public void setPlateNumber(int plateNumber) {
+        this.plateNumber = plateNumber;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public void setOwner(Driver owner) {
+        this.owner = owner;
+    }
+
+    public void setColour(String colour) {
+        this.colour = colour;
+    }
+
+    public void setManufacturer(String manufacturer) {
+        this.manufacturer = manufacturer;
+    }
+
 
     public void showVehicle()
     {
