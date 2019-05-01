@@ -14,7 +14,7 @@ public abstract class Licence {
 
         licenseNumber = random.nextInt(89999) + 10000;
 
-        return licenseNumber;
+        return licenseNumber ;
     }
 
 
