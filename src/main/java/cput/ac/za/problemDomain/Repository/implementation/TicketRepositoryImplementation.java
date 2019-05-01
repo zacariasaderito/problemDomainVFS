@@ -22,7 +22,7 @@ public class TicketRepositoryImplementation implements TicketRepository {
         if (repository == null)
             repository = new TicketRepositoryImplementation();
 
-        return null;
+        return repository;
     }
 
 

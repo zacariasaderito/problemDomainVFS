@@ -1,6 +1,8 @@
 package cput.ac.za.problemDomain.Repository;
 
-public interface LicenceRepository {
+import cput.ac.za.problemDomain.domain.document.Licence;
+
+public interface LicenceRepository extends GeneralRepository<Licence, String>{
 
 
 
