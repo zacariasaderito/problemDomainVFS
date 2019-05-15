@@ -1,7 +1,7 @@
 package cput.ac.za.problemDomain.domain.person;
 
 import cput.ac.za.problemDomain.domain.document.Licence;
-import cput.ac.za.problemDomain.factory.LicenseFactory;
+import cput.ac.za.problemDomain.factory.document.LicenseFactory;
 
 
 public class Driver {
