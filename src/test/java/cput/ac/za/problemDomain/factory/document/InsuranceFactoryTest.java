@@ -8,5 +8,6 @@ public class InsuranceFactoryTest {
 
     @Test
     public void getInsurance() {
+
     }
 }
