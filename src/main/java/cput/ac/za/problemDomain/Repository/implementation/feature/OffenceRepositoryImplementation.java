@@ -1,17 +1,15 @@
 package cput.ac.za.problemDomain.Repository.implementation.feature;
 
-import cput.ac.za.problemDomain.Repository.Interfaces.person.OfficerRepository;
+import cput.ac.za.problemDomain.Repository.Interfaces.feature.OffenceRepository;
 import cput.ac.za.problemDomain.domain.feature.Offence;
-import cput.ac.za.problemDomain.domain.person.Officer;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
-public class OffenceRepositoryImplementation implements OfficerRepository {
+public class OffenceRepositoryImplementation implements OffenceRepository {
 
 
     private static OffenceRepositoryImplementation repository = null;
-    private Set<Offence> offences;
+    private Map<String , Offence> offences;
 
     public static OffenceRepositoryImplementation getRepository() {
         if (repository == null)
@@ -20,26 +18,36 @@ public class OffenceRepositoryImplementation implements OfficerRepository {
     }
 
     private OffenceRepositoryImplementation() {
-        this.offences = new HashSet<>();
+        this.offences = new HashMap<>();
     }
 
     @Override
-    public Officer create(Officer officer) {
-        return null;
+    public Offence create(Offence offence) {
+        this.offences.put(offence.getOffenceId(), offence);
+        return offence;
     }
 
     @Override
-    public Officer update(Officer officer) {
+    public Offence update(Offence offence) {
+        this.offences.replace(offence.getOffenceId(), offence);
         return null;
     }
 
     @Override
     public void delete(String s) {
-
+        this.offences.remove(s);
     }
 
     @Override
-    public Officer read(String s) {
-        return null;
+    public Offence read(String s) {
+        return this.offences.get(s);
+    }
+
+    @Override
+    public Set<Offence> getAll() {
+        Collection<Offence> offences = this.offences.values();
+        HashSet<Offence> set = new HashSet<>();
+        set.addAll(offences);
+        return set;
     }
 }

@@ -3,13 +3,12 @@ package cput.ac.za.problemDomain.Repository.implementation.transport;
 import cput.ac.za.problemDomain.Repository.Interfaces.transport.VehicleRepository;
 import cput.ac.za.problemDomain.domain.transport.Vehicle;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class VehicleRepositoryImplementation implements VehicleRepository {
 
     private static VehicleRepositoryImplementation repository = null;
-    private Set<Vehicle> vehicles;
+    private Map<String, Vehicle> vehicles;
 
     public static VehicleRepositoryImplementation getInstance()
     {
@@ -20,33 +19,36 @@ public class VehicleRepositoryImplementation implements VehicleRepository {
 
 
     private VehicleRepositoryImplementation() {
-
-        this.vehicles = new HashSet<>();
+        this.vehicles = new HashMap<>();
     }
 
     @Override
     public Vehicle create(Vehicle vehicle) {
-        this.vehicles.add(vehicle);
+        this.vehicles.put(vehicle.getPlateNumber(), vehicle);
         return vehicle;
     }
 
     @Override
     public Vehicle update(Vehicle vehicle) {
-        return null;
+        this.vehicles.replace(vehicle.getPlateNumber(), vehicle);
+        return this.vehicles.get(vehicle.getPlateNumber());
     }
 
     @Override
     public void delete(String s) {
-
+        this.vehicles.remove(s);
     }
 
     @Override
     public Vehicle read(String s) {
-        return null;
+        return this.vehicles.get(s);
     }
 
-    public Set<Vehicle> getAll()
-    {
-        return this.vehicles;
+    @Override
+    public Set<Vehicle> getAll() {
+        Collection<Vehicle> vehicles = this.vehicles.values();
+        HashSet<Vehicle> set = new HashSet<>();
+        set.addAll(vehicles);
+        return set;
     }
 }

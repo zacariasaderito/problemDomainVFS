@@ -5,7 +5,7 @@ import cput.ac.za.problemDomain.domain.person.Driver;
 
 public abstract class Vehicle {
 
-    private int plateNumber;
+    private String plateNumber;
     private String category;
     private Driver owner;
     private String colour;
@@ -19,7 +19,7 @@ public abstract class Vehicle {
     public Vehicle(String plateNumber, String category, Driver owner, String colour, String manufacturer) {
     }
 
-    public int getPlateNumber() {
+    public String getPlateNumber() {
         return plateNumber;
     }
 
@@ -39,7 +39,7 @@ public abstract class Vehicle {
         return manufacturer;
     }
 
-    public void setPlateNumber(int plateNumber) {
+    public void setPlateNumber(String plateNumber) {
         this.plateNumber = plateNumber;
     }
 

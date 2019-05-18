@@ -3,13 +3,12 @@ package cput.ac.za.problemDomain.Repository.implementation.document;
 import cput.ac.za.problemDomain.Repository.Interfaces.document.RegistrationCertificateRepository;
 import cput.ac.za.problemDomain.domain.document.RegistrationCertificate;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class RegistrationCertificateRepositoryImplementation implements RegistrationCertificateRepository {
 
     private static RegistrationCertificateRepositoryImplementation repository = null;
-    private Set<RegistrationCertificate> registrationCertificates;
+    private Map<String, RegistrationCertificate> registrationCertificates;
 
     public static RegistrationCertificateRepositoryImplementation getRepository() {
         if (repository == null)
@@ -18,26 +17,36 @@ public class RegistrationCertificateRepositoryImplementation implements Registra
     }
 
     private RegistrationCertificateRepositoryImplementation() {
-        this.registrationCertificates = new HashSet<>();
+        this.registrationCertificates = new HashMap<>();
     }
 
     @Override
     public RegistrationCertificate create(RegistrationCertificate registrationCertificate) {
-        return null;
+        this.registrationCertificates.put(registrationCertificate.getRegistrationNumber(), registrationCertificate);
+        return registrationCertificate;
     }
 
     @Override
     public RegistrationCertificate update(RegistrationCertificate registrationCertificate) {
-        return null;
+        this.registrationCertificates.replace(registrationCertificate.getRegistrationNumber(), registrationCertificate);
+        return this.registrationCertificates.get(registrationCertificate.getRegistrationNumber());
     }
 
     @Override
     public void delete(String s) {
-
+        this.registrationCertificates.remove(s);
     }
 
     @Override
     public RegistrationCertificate read(String s) {
-        return null;
+        return this.registrationCertificates.get(s);
+    }
+
+    @Override
+    public Set<RegistrationCertificate> getAll() {
+        Collection<RegistrationCertificate> registrationCertificates = this.registrationCertificates.values();
+        HashSet<RegistrationCertificate> set = new HashSet<>();
+        set.addAll(registrationCertificates);
+        return set;
     }
 }

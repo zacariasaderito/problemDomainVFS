@@ -5,28 +5,21 @@ import java.util.Random;
 public abstract class Licence {
 
 
-    private int licenseNumber;
+    private String licenseNumber;
     private String type;
 
-    private int getLicenseNumber()
-    {
-        Random random = new Random();
-
-        licenseNumber = random.nextInt(89999) + 10000;
-
-        return licenseNumber ;
+    public String getLicenseNumber() {
+        return licenseNumber;
     }
 
+    public String getType() {
+        return type;
+    }
 
     //  Default constructor
-    public Licence(String type) {
-        licenseNumber = getLicenseNumber();
-        this.type = type;
-    }
+    public Licence(String type) {}
 
-    public void showLicence()
-    {
-    }
+    public void showLicence() {}
 
     @Override
     public String toString() {

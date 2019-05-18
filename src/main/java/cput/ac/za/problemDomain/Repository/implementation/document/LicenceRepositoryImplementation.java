@@ -3,13 +3,12 @@ package cput.ac.za.problemDomain.Repository.implementation.document;
 import cput.ac.za.problemDomain.Repository.Interfaces.document.LicenceRepository;
 import cput.ac.za.problemDomain.domain.document.Licence;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class LicenceRepositoryImplementation implements LicenceRepository {
 
     private static LicenceRepositoryImplementation repository = null;
-    private Set<Licence> licences;
+    private Map<String, Licence> licences;
 
     public static LicenceRepositoryImplementation getRepository() {
         if (repository == null)
@@ -18,27 +17,38 @@ public class LicenceRepositoryImplementation implements LicenceRepository {
     }
 
     private LicenceRepositoryImplementation() {
-        this.licences = new HashSet<>();
+        this.licences = new HashMap<>();
     }
 
 
     @Override
     public Licence create(Licence licence) {
-        return null;
+        this.licences.put(licence.getLicenseNumber(), licence);
+        return licence;
     }
 
     @Override
     public Licence update(Licence licence) {
-        return null;
+        this.licences.replace(licence.getLicenseNumber(), licence);
+        return this.licences.get(licence.getLicenseNumber());
     }
 
     @Override
     public void delete(String s) {
-
+        this.licences.remove(s);
     }
 
     @Override
     public Licence read(String s) {
-        return null;
+        return this.licences.get(s);
     }
+
+    @Override
+    public Set<Licence> getAll() {
+        Collection<Licence> licences = this.licences.values();
+        HashSet<Licence> set = new HashSet<>();
+        set.addAll(licences);
+        return set;
+    }
+
 }

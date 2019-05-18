@@ -2,8 +2,10 @@ package cput.ac.za.problemDomain.services.implementation.person;
 
 import cput.ac.za.problemDomain.domain.person.Officer;
 import cput.ac.za.problemDomain.services.interfaces.person.OfficerService;
-
+//  @Service
 public class OfficerServiceImplementation implements OfficerService {
+//    @Autowired
+
     @Override
     public Officer create(Officer officer) {
         return null;

@@ -19,7 +19,6 @@ public class LicenseFactory {
             licence = new MotobikeLicense("MOTOBIKE");
 
         return licence;
-
     }
 
 }
