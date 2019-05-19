@@ -10,7 +10,7 @@ public class VehicleRepositoryImplementation implements VehicleRepository {
     private static VehicleRepositoryImplementation repository = null;
     private Map<String, Vehicle> vehicles;
 
-    public static VehicleRepositoryImplementation getInstance()
+    public static VehicleRepositoryImplementation getRepository()
     {
         if (repository == null)
             repository = new VehicleRepositoryImplementation();

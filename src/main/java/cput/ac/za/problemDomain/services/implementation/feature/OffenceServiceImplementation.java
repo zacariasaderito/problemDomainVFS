@@ -1,26 +1,55 @@
 package cput.ac.za.problemDomain.services.implementation.feature;
 
+import cput.ac.za.problemDomain.Repository.Interfaces.feature.OffenceRepository;
+import cput.ac.za.problemDomain.Repository.implementation.feature.OffenceRepositoryImplementation;
 import cput.ac.za.problemDomain.domain.feature.Offence;
 import cput.ac.za.problemDomain.services.interfaces.feature.OffenceService;
+import org.springframework.stereotype.Service;
 
+import java.util.Set;
+
+@Service
 public class OffenceServiceImplementation implements OffenceService {
+
+    //    @Autowired
+//    @Qualifier("InMemory")
+    private OffenceRepository repository;
+    private static OffenceServiceImplementation service = null;
+
+    private OffenceServiceImplementation() {
+        this.repository = OffenceRepositoryImplementation.getRepository();
+    }
+
+    public static OffenceServiceImplementation getService() {
+        if (service == null)
+            service = new OffenceServiceImplementation();
+
+        return service;
+    }
+
     @Override
     public Offence create(Offence offence) {
-        return null;
+        return repository.create(offence);
     }
 
     @Override
     public Offence update(Offence offence) {
-        return null;
+        return repository.update(offence);
     }
 
     @Override
     public void delete(String s) {
-
+        repository.delete(s);
     }
 
     @Override
     public Offence read(String s) {
-        return null;
+        return repository.read(s);
     }
+
+    @Override
+    public Set<Offence> getAll() {
+        return this.repository.getAll();
+    }
+
 }
