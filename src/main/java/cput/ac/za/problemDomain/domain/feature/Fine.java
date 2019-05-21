@@ -7,7 +7,7 @@ public class Fine {
 
     private String fineNumber;
     private String status;
-    private Date dueDate;
+    private float dueDate;
     private double price;
 
     //  Default constructor
@@ -31,7 +31,7 @@ public class Fine {
         return status;
     }
 
-    public Date getDueDate() {
+    public float getDueDate() {
         return dueDate;
     }
 
@@ -44,7 +44,7 @@ public class Fine {
     {
         private String fineNumber;
         private String status;
-        private Date dueDate;
+        private float dueDate;
         private double price;
 
 
@@ -60,7 +60,7 @@ public class Fine {
             return this;
         }
 
-        public Builder dueDate(Date dueDate)
+        public Builder dueDate(float dueDate)
         {
             this.dueDate = dueDate;
             return this;
@@ -79,5 +79,13 @@ public class Fine {
 
     }
 
-
+    @Override
+    public String toString() {
+        return "Fine{" +
+                "fineNumber='" + fineNumber + '\'' +
+                ", status='" + status + '\'' +
+                ", dueDate=" + dueDate +
+                ", price=" + price +
+                '}';
+    }
 }

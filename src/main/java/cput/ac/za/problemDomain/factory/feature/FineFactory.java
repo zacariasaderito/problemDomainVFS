@@ -7,7 +7,7 @@ import java.util.Date;
 
 public class FineFactory {
 
-    public static Fine getFine(String status, Date dueDate, double price)
+    public static Fine getFine(String status, float dueDate, double price)
     {
         return new Fine.Builder()
                 .fineNumber(GenID.generateId())

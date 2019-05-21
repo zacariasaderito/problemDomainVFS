@@ -50,7 +50,13 @@ public class Trial {
             return new Trial(this);
         }
 
-
     }
 
+    @Override
+    public String toString() {
+        return "Trial{" +
+                "requestNumber='" + requestNumber + '\'' +
+                ", veredict='" + veredict + '\'' +
+                '}';
+    }
 }

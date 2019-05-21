@@ -46,4 +46,11 @@ public class BookLog {
 
     }
 
+    @Override
+    public String toString() {
+        return "BookLog{" +
+                "logNumber='" + logNumber + '\'' +
+                ", numberOfLog=" + numberOfLog +
+                '}';
+    }
 }

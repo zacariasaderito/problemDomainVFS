@@ -9,7 +9,7 @@ public class Warrant {
 
     private String warrantNumber;
     private String description;
-    private Date issueDate;
+    private float issueDate;
     private Driver concernedDriver;
 
     //  Default constructor
@@ -31,7 +31,7 @@ public class Warrant {
         return description;
     }
 
-    public Date getIssueDate() {
+    public float getIssueDate() {
         return issueDate;
     }
 
@@ -45,7 +45,7 @@ public class Warrant {
 
         private String warrantNumber;
         private String description;
-        private Date issueDate;
+        private float issueDate;
         private Driver concernedDriver;
 
         public Builder warrantNumber(String warrantNumber)
@@ -60,13 +60,13 @@ public class Warrant {
             return this;
         }
 
-        public Builder issueDate(Date issueDate)
+        public Builder issueDate(float issueDate)
         {
             this.issueDate = issueDate;
             return this;
         }
 
-        public Builder concernedDriver(Driver driver)
+        public Builder concernedDriver(Driver concernedDriver)
         {
             this.concernedDriver = concernedDriver;
             return this;
@@ -78,7 +78,13 @@ public class Warrant {
         }
     }
 
-
-
-
+    @Override
+    public String toString() {
+        return "Warrant{" +
+                "warrantNumber='" + warrantNumber + '\'' +
+                ", description='" + description + '\'' +
+                ", issueDate=" + issueDate +
+                ", concernedDriver=" + concernedDriver +
+                '}';
+    }
 }

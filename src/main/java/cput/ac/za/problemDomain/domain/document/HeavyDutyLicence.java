@@ -1,16 +1,15 @@
 package cput.ac.za.problemDomain.domain.document;
 
-
-public class TaxiLicense implements Licence {
+public class HeavyDutyLicence implements Licence {
 
     private String licenceNumber;
     private String type;
 
-    private TaxiLicense(Builder builder)
+
+    private HeavyDutyLicence(Builder builder)
     {
         this.licenceNumber = builder.licenceNumber;
         this.type = builder.type;
-
     }
 
     public static class Builder
@@ -30,9 +29,9 @@ public class TaxiLicense implements Licence {
             return this;
         }
 
-        public TaxiLicense build()
+        public HeavyDutyLicence build()
         {
-            return new TaxiLicense(this);
+            return new HeavyDutyLicence(this);
         }
 
     }
@@ -40,7 +39,7 @@ public class TaxiLicense implements Licence {
     @Override
     public void showLicence()
     {
-        System.out.println("Licence for TAXI");
+        System.out.println("Licence for HEAVY DUTY VEHICLE");
     }
 
     public String getLicenceNumber() {
@@ -53,10 +52,13 @@ public class TaxiLicense implements Licence {
 
     @Override
     public String toString() {
-        return "TaxiLicense{" +
+        return "HeavyDutyLicence{" +
                 "licenceNumber='" + licenceNumber + '\'' +
                 ", type='" + type + '\'' +
                 '}';
     }
-
 }
+
+
+
+

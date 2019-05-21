@@ -1,16 +1,15 @@
 package cput.ac.za.problemDomain.domain.document;
 
-
-public class TaxiLicense implements Licence {
+public class CarLicence implements Licence {
 
     private String licenceNumber;
     private String type;
 
-    private TaxiLicense(Builder builder)
+
+    private CarLicence(Builder builder)
     {
         this.licenceNumber = builder.licenceNumber;
         this.type = builder.type;
-
     }
 
     public static class Builder
@@ -30,20 +29,15 @@ public class TaxiLicense implements Licence {
             return this;
         }
 
-        public TaxiLicense build()
+        public CarLicence build()
         {
-            return new TaxiLicense(this);
+            return new CarLicence(this);
         }
 
     }
 
-    @Override
-    public void showLicence()
-    {
-        System.out.println("Licence for TAXI");
-    }
 
-    public String getLicenceNumber() {
+    public String getLicenseNumber() {
         return licenceNumber;
     }
 
@@ -51,12 +45,16 @@ public class TaxiLicense implements Licence {
         return type;
     }
 
+    public void showLicence()
+    {
+        System.out.println("Licence for CAR");
+    }
+
     @Override
     public String toString() {
-        return "TaxiLicense{" +
+        return "CarLicence{" +
                 "licenceNumber='" + licenceNumber + '\'' +
                 ", type='" + type + '\'' +
                 '}';
     }
-
 }

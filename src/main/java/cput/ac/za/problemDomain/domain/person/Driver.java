@@ -1,7 +1,7 @@
 package cput.ac.za.problemDomain.domain.person;
 
 import cput.ac.za.problemDomain.domain.document.Licence;
-import cput.ac.za.problemDomain.factory.document.LicenseFactory;
+import cput.ac.za.problemDomain.factory.document.LicenceFactory;
 
 
 public class Driver {
@@ -51,7 +51,7 @@ public class Driver {
     // Get factory
     public Licence getLicence(String type)
     {
-        licence = LicenseFactory.createLicense(type);
+        licence = LicenceFactory.createLicense(type);
         return licence;
     }
 

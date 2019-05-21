@@ -19,8 +19,9 @@ public class DriverController {
     @GetMapping("/create/{name}")
     public @ResponseBody
     Driver create(@PathVariable String name) {
-        Driver driver = DriverFactory.getDriver("Ade", 22, "Lubango", 0616,"Taxy");
-        return driver;
+//        Driver driver = DriverFactory.getDriver("Ade", 22, "Lubango", 0616,);
+//        return driver;
+        return null;
     }
 
     @GetMapping("/getall")

@@ -8,7 +8,7 @@ import java.util.Date;
 
 public class WarrantFactory {
 
-    public static Warrant getWarrant(String description, Date issueDate, Driver concernedDriver)
+    public static Warrant getWarrant(String description, float issueDate, Driver concernedDriver)
     {
         return new Warrant.Builder()
                 .warrantNumber(GenID.generateId())

@@ -7,7 +7,7 @@ import java.util.Date;
 
 public class TicketFactory {
 
-    public static Ticket getTicket(String violation, Date date)
+    public static Ticket getTicket(String violation, float date)
     {
         return new Ticket.Builder()
                 .ticketNumber(GenID.generateId())

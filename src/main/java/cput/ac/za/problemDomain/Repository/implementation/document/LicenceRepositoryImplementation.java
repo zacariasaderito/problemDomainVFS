@@ -23,14 +23,15 @@ public class LicenceRepositoryImplementation implements LicenceRepository {
 
     @Override
     public Licence create(Licence licence) {
-        this.licences.put(licence.getLicenseNumber(), licence);
+//        this.licences.put(licence.getLicenseNumber(), licence);
         return licence;
     }
 
     @Override
     public Licence update(Licence licence) {
-        this.licences.replace(licence.getLicenseNumber(), licence);
-        return this.licences.get(licence.getLicenseNumber());
+//        this.licences.replace(licence.getLicenseNumber(), licence);
+//        return this.licences.get(licence.getLicenseNumber());
+        return null;
     }
 
     @Override

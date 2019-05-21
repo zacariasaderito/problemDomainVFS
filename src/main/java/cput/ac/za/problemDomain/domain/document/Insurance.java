@@ -1,19 +1,12 @@
 package cput.ac.za.problemDomain.domain.document;
 
-import java.util.*;
-
-
 public class Insurance {
 
     private String insuranceNumber;
     private double price;
     private String description;
     private boolean status;
-    private Date expiryDate;
-
-    //  Default constructor
-    public Insurance() {
-    }
+    private float expiryDate;
 
     private Insurance(Builder builder)
     {
@@ -24,28 +17,6 @@ public class Insurance {
         this.expiryDate = builder.expiryDate;
     }
 
-//  Getters
-    public String getInsuranceNumber() {
-        return insuranceNumber;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public boolean isStatus() {
-        return status;
-    }
-
-    public Date getExpiryDate() {
-        return expiryDate;
-    }
-
-
 //  Builder
     public static class Builder
     {
@@ -53,7 +24,7 @@ public class Insurance {
         private double price;
         private String description;
         private boolean status;
-        private Date expiryDate;
+        private float expiryDate;
 
         public Builder insuranceNumber(String insuranceNumber)
         {
@@ -79,7 +50,7 @@ public class Insurance {
             return this;
         }
 
-        public Builder expiryDate(Date expiryDate)
+        public Builder expiryDate(float expiryDate)
         {
             this.expiryDate = expiryDate;
             return this;
@@ -90,7 +61,38 @@ public class Insurance {
             return new Insurance(this);
         }
 
-
     }
 
+
+//  Getters
+    public String getInsuranceNumber() {
+        return insuranceNumber;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public boolean isStatus() {
+        return status;
+    }
+
+    public Float getExpiryDate() {
+        return expiryDate;
+    }
+
+    @Override
+    public String toString() {
+        return "Insurance{" +
+                "insuranceNumber='" + insuranceNumber + '\'' +
+                ", price=" + price +
+                ", description='" + description + '\'' +
+                ", status=" + status +
+                ", expiryDate=" + expiryDate +
+                '}';
+    }
 }

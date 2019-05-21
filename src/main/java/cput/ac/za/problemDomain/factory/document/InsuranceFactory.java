@@ -7,7 +7,7 @@ import java.util.Date;
 
 public class InsuranceFactory {
 
-    public static Insurance getInsurance(double price, String description, boolean status, Date expiryDate)
+    public static Insurance getInsurance(double price, String description, boolean status, float expiryDate)
     {
         return new Insurance.Builder()
                 .insuranceNumber(GenID.generateId())

@@ -1,22 +1,22 @@
 package cput.ac.za.problemDomain.domain.document;
 
-
-public class TaxiLicense implements Licence {
+public class MotorbikeLicence implements Licence {
 
     private String licenceNumber;
     private String type;
 
-    private TaxiLicense(Builder builder)
+
+    private MotorbikeLicence(Builder builder)
     {
         this.licenceNumber = builder.licenceNumber;
         this.type = builder.type;
-
     }
 
     public static class Builder
     {
         private String licenceNumber;
         private String type;
+
 
         public Builder licenceNumber(String licenceNumber)
         {
@@ -30,17 +30,16 @@ public class TaxiLicense implements Licence {
             return this;
         }
 
-        public TaxiLicense build()
+        public MotorbikeLicence build()
         {
-            return new TaxiLicense(this);
+            return new MotorbikeLicence(this);
         }
 
     }
 
     @Override
-    public void showLicence()
-    {
-        System.out.println("Licence for TAXI");
+    public void showLicence() {
+        System.out.println("Licence for MotorbikeLicence");
     }
 
     public String getLicenceNumber() {
@@ -53,7 +52,7 @@ public class TaxiLicense implements Licence {
 
     @Override
     public String toString() {
-        return "TaxiLicense{" +
+        return "MotorbikeLicence{" +
                 "licenceNumber='" + licenceNumber + '\'' +
                 ", type='" + type + '\'' +
                 '}';

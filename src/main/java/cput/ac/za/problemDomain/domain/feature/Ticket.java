@@ -7,7 +7,7 @@ public class Ticket {
 
     private String ticketNumber;
     private String violation;
-    private Date date;
+    private float date;
 
 
     //  Default constructor
@@ -30,7 +30,7 @@ public class Ticket {
         return violation;
     }
 
-    public Date getDate() {
+    public float getDate() {
         return date;
     }
 
@@ -39,7 +39,7 @@ public class Ticket {
     {
         private String ticketNumber;
         private String violation;
-        private Date date;
+        private float date;
 
 
         public Builder ticketNumber(String ticketNumber)
@@ -54,7 +54,7 @@ public class Ticket {
             return this;
         }
 
-        public Builder date(Date date)
+        public Builder date(float date)
         {
             this.date = date;
             return this;
@@ -68,7 +68,12 @@ public class Ticket {
 
     }
 
-
-
-
+    @Override
+    public String toString() {
+        return "Ticket{" +
+                "ticketNumber='" + ticketNumber + '\'' +
+                ", violation='" + violation + '\'' +
+                ", date=" + date +
+                '}';
+    }
 }
