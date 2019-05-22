@@ -6,4 +6,5 @@ public interface Licence {
 
     public void showLicence();
 
+    String getType();
 }
