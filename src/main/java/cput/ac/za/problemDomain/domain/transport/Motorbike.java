@@ -1,9 +1,8 @@
 package cput.ac.za.problemDomain.domain.transport;
 
-
 import cput.ac.za.problemDomain.domain.person.Driver;
 
-public class Car implements Vehicle{
+public class Motorbike implements Vehicle {
 
     private String plateNumber;
     private String category;
@@ -11,8 +10,7 @@ public class Car implements Vehicle{
     private String colour;
     private String manufacturer;
 
-
-    private Car(Builder builder)
+    private Motorbike(Builder builder)
     {
         this.plateNumber = builder.plateNumber;
         this.category = builder.category;
@@ -59,14 +57,12 @@ public class Car implements Vehicle{
             return this;
         }
 
-        public Car build()
-        {
-            return new Car(this);
+        public Motorbike build() {
+            return new Motorbike(this);
         }
 
     }
 
-//    GETTERS
     public String getPlateNumber() {
         return plateNumber;
     }
@@ -90,12 +86,12 @@ public class Car implements Vehicle{
     @Override
     public void showVehicle()
     {
-        System.out.println("This is a CAR");
+        System.out.println("This is a MOTOBIKE");
     }
 
     @Override
     public String toString() {
-        return "Car{" +
+        return "Motorbike{" +
                 "plateNumber='" + plateNumber + '\'' +
                 ", category='" + category + '\'' +
                 ", owner=" + owner +

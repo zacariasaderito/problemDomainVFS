@@ -19,8 +19,9 @@ public class VehicleController {
     @GetMapping("/create/{name}")
     public @ResponseBody
     Vehicle create(@PathVariable String name) {
-        Vehicle vehicle = VehicleFactory.createVehicle("moto");
-        return vehicle;
+//        Vehicle vehicle = VehicleFactory.createVehicle("moto");
+//        return vehicle;
+        return null;
     }
 
     @GetMapping("/getall")

@@ -2,7 +2,7 @@ package cput.ac.za.problemDomain.factory.transport;
 
 import cput.ac.za.problemDomain.domain.document.Licence;
 import cput.ac.za.problemDomain.domain.person.Driver;
-import cput.ac.za.problemDomain.domain.transport.Vehicle;
+import cput.ac.za.problemDomain.domain.transport.Car;
 import cput.ac.za.problemDomain.factory.document.LicenceFactory;
 import cput.ac.za.problemDomain.factory.person.DriverFactory;
 import org.junit.Assert;
@@ -11,7 +11,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class VehicleFactoryTest {
+public class CarFactoryTest {
 
     private Driver driver1;
     private Driver driver2;
@@ -28,49 +28,30 @@ public class VehicleFactoryTest {
     @Test
     public void getInsurance() {
 
-        Vehicle vehicle1 = VehicleFactory.createVehicle("car", this.driver1, "Red", "BMW");
-        Vehicle vehicle2 = VehicleFactory.createVehicle("heavy", this.driver2, "Black", "TOYOTA");
-        Vehicle vehicle3 = VehicleFactory.createVehicle("taxi", this.driver2, "Red", "BMW");
-        Vehicle vehicle4 = VehicleFactory.createVehicle("moto", this.driver1, "Black", "TOYOTA");
+        Car car1 = CarFactory.getInsurance("car", this.driver1, "Red", "BMW");
+        Car car2 = CarFactory.getInsurance("car", this.driver2, "Black", "TOYOTA");
 
-
-//        Driver1 has 2 VEHICLES: 1 / 4
-        System.out.println(vehicle1.toString());
+        System.out.println(car1.toString());
         System.out.println("Driver1");
         System.out.println(this.driver1.toString());
         System.out.println("");
 
-        System.out.println(vehicle4.toString());
-        System.out.println("Driver1");
-        System.out.println(this.driver1.toString());
-        System.out.println("");
-
-//        Driver2 has 2 VEHICLES: 2 / 3
-        System.out.println(vehicle2.toString());
         System.out.println("Driver2");
+        System.out.println(car2.toString());
         System.out.println(this.driver2.toString());
         System.out.println("");
-
-        System.out.println(vehicle3.toString());
-        System.out.println("Driver2");
-        System.out.println(this.driver2.toString());
-        System.out.println("");
-
 
 //        IF OBJECTS ARE NULL
 //        Drivers
         Assert.assertNotNull(this.driver1);
         Assert.assertNotNull(this.driver2);
 //        Cars
-        Assert.assertNotNull(vehicle1);
-        Assert.assertNotNull(vehicle2);
-        Assert.assertNotNull(vehicle3);
-        Assert.assertNotNull(vehicle4);
+        Assert.assertNotNull(car1);
+        Assert.assertNotNull(car2);
         System.out.println("Objects are NOT null");
 
 //       IF OBJECTS ARE DIFFERENT
-        Assert.assertNotEquals(vehicle1, vehicle4);
-        Assert.assertNotEquals(vehicle2, vehicle3);
+        Assert.assertNotEquals(car1, car2);
         System.out.println("Objects are different");
 
 //        IF OBJECTS ARE EQUAL

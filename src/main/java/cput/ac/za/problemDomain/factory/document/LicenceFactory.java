@@ -9,14 +9,20 @@ public class LicenceFactory {
     {
         Licence licence = null;
 
-        if(type.equals("car"))
-            licence = CarLicenceFactory.getInsurance(type);
-       else if (type.equals("taxi"))
-            licence = TaxiLicenceFactory.getInsurance(type);
-        else if (type.equals("heavy"))
-            licence = HeavyDutyLicenceFactory.getInsurance(type);
-        else if (type.equals("moto"))
-            licence = MotorBikeLicenceFactory.getInsurance(type);
+        switch (type) {
+            case "car":
+                licence = CarLicenceFactory.getInsurance(type);
+                break;
+            case "taxi":
+                licence = TaxiLicenceFactory.getInsurance(type);
+                break;
+            case "heavy":
+                licence = HeavyDutyLicenceFactory.getInsurance(type);
+                break;
+            case "moto":
+                licence = MotorBikeLicenceFactory.getInsurance(type);
+                break;
+        }
 
         return licence;
     }

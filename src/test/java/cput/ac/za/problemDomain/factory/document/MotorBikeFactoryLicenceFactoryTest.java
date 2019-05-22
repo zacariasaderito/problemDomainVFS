@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class MotorBikeLicenceFactoryTest {
+public class MotorBikeFactoryLicenceFactoryTest {
 
     @Test
     public void getInsurance() {

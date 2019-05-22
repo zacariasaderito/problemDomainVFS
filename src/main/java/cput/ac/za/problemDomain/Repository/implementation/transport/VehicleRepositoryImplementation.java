@@ -24,14 +24,15 @@ public class VehicleRepositoryImplementation implements VehicleRepository {
 
     @Override
     public Vehicle create(Vehicle vehicle) {
-        this.vehicles.put(vehicle.getPlateNumber(), vehicle);
+//        this.vehicles.put(vehicle.getPlateNumber(), vehicle);
         return vehicle;
     }
 
     @Override
     public Vehicle update(Vehicle vehicle) {
-        this.vehicles.replace(vehicle.getPlateNumber(), vehicle);
-        return this.vehicles.get(vehicle.getPlateNumber());
+//        this.vehicles.replace(vehicle.getPlateNumber(), vehicle);
+//        return this.vehicles.get(vehicle.getPlateNumber());
+        return null;
     }
 
     @Override
