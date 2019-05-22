@@ -39,11 +39,11 @@ public class TicketRepositoryImplementationTest {
 
     @Test
     public void update() {
-        String newTicketNUmber = "Payed";
+        String newViolation = "Limit break";
         Ticket updated = TicketFactory.getTicket("Limit break", 400);
         System.out.println("In update, updated = " + updated);
         this.repository.update(updated);
-        Assert.assertSame(newTicketNUmber, updated.getTicketNumber());
+        Assert.assertSame(newViolation, updated.getViolation());
     }
 
     @Test
