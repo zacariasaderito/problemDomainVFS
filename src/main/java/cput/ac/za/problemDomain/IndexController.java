@@ -1,4 +1,4 @@
-package cput.ac.za.problemDomain.controller;
+package cput.ac.za.problemDomain;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;

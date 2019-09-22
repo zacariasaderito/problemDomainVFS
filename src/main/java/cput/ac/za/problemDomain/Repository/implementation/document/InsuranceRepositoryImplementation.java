@@ -11,15 +11,16 @@ public class InsuranceRepositoryImplementation implements InsuranceRepository {
     private static InsuranceRepositoryImplementation repository = null;
     private Map<String, Insurance> insurances;
 
+    private InsuranceRepositoryImplementation() {
+        this.insurances = new HashMap<>();
+    }
+
     public static InsuranceRepositoryImplementation getRepository() {
         if (repository == null)
             repository = new InsuranceRepositoryImplementation();
         return repository;
     }
 
-    private InsuranceRepositoryImplementation() {
-        this.insurances = new HashMap<>();
-    }
 
     @Override
     public Insurance create(Insurance insurance) {
