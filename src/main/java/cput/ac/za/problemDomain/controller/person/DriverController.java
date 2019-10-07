@@ -6,6 +6,7 @@ import cput.ac.za.problemDomain.services.implementation.person.DriverServiceImpl
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Set;
 
 @RestController
@@ -26,7 +27,7 @@ public class DriverController {
 
     @GetMapping("/getall")
     @ResponseBody
-    public Set<Driver> getAll(){
+    public List<Driver> getAll(){
         return service.getAll();
     }
 }

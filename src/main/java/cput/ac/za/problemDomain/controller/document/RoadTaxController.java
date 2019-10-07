@@ -5,7 +5,7 @@ import cput.ac.za.problemDomain.services.implementation.document.RoadTaxServiceI
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Set;
+import java.util.List;
 
 @RestController
 @RequestMapping("/problemDomain/roadtax")
@@ -25,7 +25,7 @@ public class RoadTaxController {
 
     @GetMapping("/getall")
     @ResponseBody
-    public Set<RoadTax> getAll(){
+    public List<RoadTax> getAll(){
         return service.getAll();
     }
 

@@ -4,7 +4,7 @@ import java.util.Random;
 
 public interface Licence {
 
-    public void showLicence();
+    void showLicence();
 
     String getType();
 }

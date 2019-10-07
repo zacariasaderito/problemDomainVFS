@@ -1,13 +1,13 @@
 package cput.ac.za.problemDomain.services.implementation.person;
 
 import cput.ac.za.problemDomain.Repository.Interfaces.person.OfficerRepository;
-import cput.ac.za.problemDomain.Repository.implementation.person.OfficerRepositoryImplementation;
 import cput.ac.za.problemDomain.domain.person.Officer;
 import cput.ac.za.problemDomain.factory.person.OfficerFactory;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -19,11 +19,11 @@ public class OfficerServiceImplementationTest {
     private Officer officer;
     private Map<String, Officer> insurances;
 
-    @Before
-    public void setUp() throws Exception {
-        this.repository = OfficerRepositoryImplementation.getRepository();
-        this.officer = OfficerFactory.getOfficer("Nando", "Traffic ");
-    }
+//    @Before
+//    public void setUp() throws Exception {
+//        this.repository = OfficerRepositoryImplementation.getRepository();
+//        this.officer = OfficerFactory.getOfficer("Nando", "Traffic ");
+//    }
 
     private Officer getSaved(){
         return this.repository.getAll().iterator().next();
@@ -66,7 +66,7 @@ public class OfficerServiceImplementationTest {
 
     @Test
     public void getAll() {
-        Set<Officer> all = this.repository.getAll();
+        List<Officer> all = this.repository.getAll();
         System.out.println("In getAll, all = " + all);
     }
 

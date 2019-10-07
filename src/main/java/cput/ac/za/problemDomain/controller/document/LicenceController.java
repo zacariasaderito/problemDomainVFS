@@ -6,7 +6,7 @@ import cput.ac.za.problemDomain.services.implementation.document.LicenceServiceI
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Set;
+import java.util.List;
 
 @RestController
 @RequestMapping("/problemDomain/licence")
@@ -24,7 +24,7 @@ public class LicenceController {
 
     @GetMapping("/getall")
     @ResponseBody
-    public Set<Licence> getAll(){
+    public List<Licence> getAll(){
         return service.getAll();
     }
 

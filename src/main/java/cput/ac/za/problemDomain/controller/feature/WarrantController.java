@@ -6,7 +6,7 @@ import cput.ac.za.problemDomain.services.implementation.feature.WarrantServiceIm
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Set;
+import java.util.List;
 
 @RestController
 @RequestMapping("/problemDomain/warrant")
@@ -25,7 +25,7 @@ public class WarrantController {
 
     @GetMapping("/getall")
     @ResponseBody
-    public Set<Warrant> getAll(){
+    public List<Warrant> getAll(){
         return service.getAll();
     }
 

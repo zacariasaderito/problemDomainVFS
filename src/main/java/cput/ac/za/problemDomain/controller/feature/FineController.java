@@ -6,7 +6,7 @@ import cput.ac.za.problemDomain.services.implementation.feature.FineServiceImple
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Set;
+import java.util.List;
 
 @RestController
 @RequestMapping("/problemDomain/fine")
@@ -24,7 +24,7 @@ public class FineController {
 
     @GetMapping("/getall")
     @ResponseBody
-    public Set<Fine> getAll(){
+    public List<Fine> getAll(){
         return service.getAll();
     }
 }

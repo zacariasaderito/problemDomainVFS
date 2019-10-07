@@ -1,11 +1,11 @@
 package cput.ac.za.problemDomain.services.implementation.feature;
 
 import cput.ac.za.problemDomain.Repository.Interfaces.feature.FineRepository;
-import cput.ac.za.problemDomain.Repository.implementation.feature.FineRepositoryImplementation;
 import cput.ac.za.problemDomain.domain.feature.Fine;
 import cput.ac.za.problemDomain.services.interfaces.feature.FineService;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Set;
 
 @Service
@@ -17,7 +17,6 @@ public class FineServiceImplementation implements FineService {
     private static FineServiceImplementation service = null;
 
     private FineServiceImplementation() {
-        this.repository = FineRepositoryImplementation.getRepository();
     }
 
     public static FineServiceImplementation getService() {
@@ -48,7 +47,7 @@ public class FineServiceImplementation implements FineService {
     }
 
     @Override
-    public Set<Fine> getAll() {
+    public List<Fine> getAll() {
         return this.repository.getAll();
     }
 

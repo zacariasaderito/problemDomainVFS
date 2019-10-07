@@ -6,7 +6,7 @@ import cput.ac.za.problemDomain.services.implementation.person.OfficerServiceImp
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Set;
+import java.util.List;
 
 @RestController
 @RequestMapping("/problemDomain/officer")
@@ -24,7 +24,7 @@ public class OfficerController {
 
     @GetMapping("/getall")
     @ResponseBody
-    public Set<Officer> getAll(){
+    public List<Officer> getAll(){
         return service.getAll();
     }
 

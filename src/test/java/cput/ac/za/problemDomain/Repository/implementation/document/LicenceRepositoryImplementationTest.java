@@ -16,10 +16,10 @@ public class LicenceRepositoryImplementationTest {
     private Licence licence;
 
     @Before
-    public void setUp() throws Exception {
-        this.repository = LicenceRepositoryImplementation.getRepository();
-        this.licence = LicenceFactory.createLicense("car");
-    }
+//    public void setUp() throws Exception {
+//        this.repository = LicenceRepositoryImplementation.getRepository();
+//        this.licence = LicenceFactory.createLicense("car");
+//    }
 
     @Test
     public void getRepository() {

@@ -1,11 +1,22 @@
 package cput.ac.za.problemDomain.domain.document;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Insurance {
 
+    @Id
+    @Column(name = "idInsurance")
     private String insuranceNumber;
+    @Column(name = "price")
     private double price;
+    @Column(name = "description")
     private String description;
+    @Column(name = "status")
     private boolean status;
+    @Column(name = "expiry_date")
     private float expiryDate;
 
     private Insurance(Builder builder)

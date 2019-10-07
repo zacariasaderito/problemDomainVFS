@@ -1,24 +1,21 @@
 package cput.ac.za.problemDomain.services.implementation.document;
 
 import cput.ac.za.problemDomain.Repository.Interfaces.document.LicenceRepository;
-import cput.ac.za.problemDomain.Repository.implementation.document.LicenceRepositoryImplementation;
 import cput.ac.za.problemDomain.domain.document.Licence;
 import cput.ac.za.problemDomain.services.interfaces.document.LicenceService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Set;
+import java.util.List;
 
 @Service
 public class LicenceServiceImplementation implements LicenceService {
 
-    //    @Autowired
-//    @Qualifier("InMemory")
+    @Autowired
     private LicenceRepository repository;
     private static LicenceServiceImplementation service = null;
 
-    private LicenceServiceImplementation() {
-        this.repository = LicenceRepositoryImplementation.getRepository();
-    }
+    private LicenceServiceImplementation(){}
 
     public static LicenceServiceImplementation getService() {
         if (service == null)
@@ -48,7 +45,7 @@ public class LicenceServiceImplementation implements LicenceService {
     }
 
     @Override
-    public Set<Licence> getAll() {
+    public List<Licence> getAll() {
         return this.repository.getAll();
     }
 }

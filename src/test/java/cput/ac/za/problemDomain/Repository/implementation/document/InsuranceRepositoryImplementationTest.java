@@ -13,7 +13,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.Set;
 
 import static org.junit.Assert.*;
@@ -28,23 +30,23 @@ public class InsuranceRepositoryImplementationTest {
     private Map<String, Insurance> insurances;
 
     @Before
-    public void setUp() throws Exception {
-        this.repository = InsuranceRepositoryImplementation.getRepository();
-        this.insurance = InsuranceFactory.getInsurance(200, "Not Payed", true, 121212);
-    }
+//    public void setUp() throws Exception {
+//        this.repository = repository.getRepository();
+//        this.insurance = InsuranceFactory.getInsurance(200, "Not Payed", true, 121212);
+//    }
 
     private Insurance getSaved(){
-        return this.repository.getAll().iterator().next();
+        return this.repository.findAll().iterator().next();
     }
 
     @Test
     public void getRepository() {
-        this.repository.getAll().iterator().next();
+        this.repository.findAll().iterator().next();
     }
 
     @Test
     public void create() throws Exception {
-        Insurance created = this.repository.create(this.insurance);
+        Insurance created = this.repository.save(this.insurance);
         System.out.println("In create, created = " + created);
         Assert.assertNotNull(created);
         Assert.assertSame(created, this.insurance);
@@ -60,30 +62,31 @@ public class InsuranceRepositoryImplementationTest {
         String newInsuranceDescription = "Payed";
         Insurance updated = InsuranceFactory.getInsurance(400, "Payed", false, 212121);
         System.out.println("In update, updated = " + updated);
-        this.repository.update(updated);
+        this.repository.save(updated);
         Assert.assertSame(newInsuranceDescription, updated.getDescription());
     }
 
     @Test
     public void delete() {
-        Insurance saved = getSaved();
-        this.repository.delete(saved.getInsuranceNumber());
-        getAll();
+//        Insurance saved = getSaved();
+//        this.repository.deleteById(saved.getInsuranceNumber());
+//        getAll();
 
     }
 
     @Test
     public void read() {
         Insurance saved = InsuranceFactory.getInsurance(400, "Payed", false, 212121);
-        Insurance read = this.repository.read(saved.getInsuranceNumber());
-        System.out.println("In read, read = "+ read);
-        Assert.assertSame(read, saved);
+        Optional<Insurance> optionalInsurance = this.repository.findById(saved.getInsuranceNumber());
+
+        System.out.println("In read, read = "+ optionalInsurance);
+        Assert.assertSame(optionalInsurance, saved);
 
     }
 
     @Test
     public void getAll() {
-        Set<Insurance> all = this.repository.getAll();
+        List<Insurance> all = this.repository.findAll();
         System.out.println("In getAll, all = " + all);
     }
 }

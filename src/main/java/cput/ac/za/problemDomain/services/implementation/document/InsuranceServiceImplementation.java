@@ -1,23 +1,23 @@
 package cput.ac.za.problemDomain.services.implementation.document;
 
 import cput.ac.za.problemDomain.Repository.Interfaces.document.InsuranceRepository;
-import cput.ac.za.problemDomain.Repository.implementation.document.InsuranceRepositoryImplementation;
 import cput.ac.za.problemDomain.domain.document.Insurance;
 import cput.ac.za.problemDomain.services.interfaces.document.InsuranceService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 
 @Service
 public class InsuranceServiceImplementation implements InsuranceService {
-
-    //    @Autowired
-    //    @Qualifier("InMemory")
+    @Autowired
     private InsuranceRepository repository;
     private static InsuranceServiceImplementation service = null;
 
     private InsuranceServiceImplementation() {
-        this.repository = InsuranceRepositoryImplementation.getRepository();
+
     }
 
     public static InsuranceServiceImplementation getService() {
@@ -29,27 +29,37 @@ public class InsuranceServiceImplementation implements InsuranceService {
 
     @Override
     public Insurance create(Insurance insurance) {
-        return repository.create(insurance);
+        return repository.save(insurance);
     }
 
     @Override
     public Insurance update(Insurance insurance) {
-        return repository.update(insurance);
+        return repository.save(insurance);
     }
 
     @Override
     public void delete(String s) {
-        repository.delete(s);
+        repository.deleteById(s);
     }
 
     @Override
     public Insurance read(String s) {
-        return repository.read(s);
+        Optional<Insurance> optionalInsurance = this.repository.findById(s);
+        return optionalInsurance.orElse(null);
     }
 
-    @Override
-    public Set<Insurance> getAll() {
-        return repository.getAll();
+
+    public Insurance retrieveByDescription(String InsuranceDescription) {
+        List<Insurance> Insurances = getAll();
+        for (Insurance Insurance : Insurances) {
+            if (Insurance.getDescription().equalsIgnoreCase(InsuranceDescription)) return Insurance;
+        }
+        return null;
+    }
+
+    //@Override
+    public List<Insurance> getAll() {
+        return repository.findAll();
     }
 
 }

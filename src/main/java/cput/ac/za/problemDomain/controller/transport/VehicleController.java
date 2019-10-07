@@ -6,7 +6,7 @@ import cput.ac.za.problemDomain.services.implementation.transport.VehicleService
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Set;
+import java.util.List;
 
 @RestController
 @RequestMapping("/problemDomain/vehicle")
@@ -26,7 +26,7 @@ public class VehicleController {
 
     @GetMapping("/getall")
     @ResponseBody
-    public Set<Vehicle> getAll(){
+    public List<Vehicle> getAll(){
         return service.getAll();
     }
 

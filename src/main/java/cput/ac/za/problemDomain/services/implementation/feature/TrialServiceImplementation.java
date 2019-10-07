@@ -1,11 +1,11 @@
 package cput.ac.za.problemDomain.services.implementation.feature;
 
 import cput.ac.za.problemDomain.Repository.Interfaces.feature.TrialRepository;
-import cput.ac.za.problemDomain.Repository.implementation.feature.TrialRepositoryEmplementation;
 import cput.ac.za.problemDomain.domain.feature.Trial;
 import cput.ac.za.problemDomain.services.interfaces.feature.TrialService;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Set;
 
 @Service
@@ -17,7 +17,6 @@ public class TrialServiceImplementation implements TrialService {
     private static TrialServiceImplementation service = null;
 
     private TrialServiceImplementation() {
-        this.repository = TrialRepositoryEmplementation.getRepository();
     }
 
     public static TrialServiceImplementation getService() {
@@ -48,7 +47,7 @@ public class TrialServiceImplementation implements TrialService {
     }
 
     @Override
-    public Set<Trial> getAll() {
+    public List<Trial> getAll() {
         return this.repository.getAll();
     }
 

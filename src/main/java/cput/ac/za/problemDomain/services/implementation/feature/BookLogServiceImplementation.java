@@ -1,23 +1,24 @@
 package cput.ac.za.problemDomain.services.implementation.feature;
 
 import cput.ac.za.problemDomain.Repository.Interfaces.feature.BookLogRepository;
-import cput.ac.za.problemDomain.Repository.implementation.feature.BookLogRepositoryImplementation;
 import cput.ac.za.problemDomain.domain.feature.BookLog;
 import cput.ac.za.problemDomain.services.interfaces.feature.BookLogService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Set;
 
 @Service
 public class BookLogServiceImplementation implements BookLogService {
 
-    //    @Autowired
-//    @Qualifier("InMemory")
+
+    @Autowired
     private BookLogRepository repository;
     private static BookLogServiceImplementation service = null;
 
     private BookLogServiceImplementation() {
-        this.repository = BookLogRepositoryImplementation.getRepository();
+
     }
 
     public static BookLogServiceImplementation getService() {
@@ -48,7 +49,7 @@ public class BookLogServiceImplementation implements BookLogService {
     }
 
     @Override
-    public Set<BookLog> getAll() {
+    public List<BookLog> getAll() {
         return this.repository.getAll();
     }
 

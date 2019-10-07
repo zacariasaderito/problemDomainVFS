@@ -6,6 +6,7 @@ import cput.ac.za.problemDomain.services.implementation.feature.OffenceServiceIm
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Set;
 
 @RestController
@@ -25,7 +26,7 @@ public class OffenceController {
 
     @GetMapping("/getall")
     @ResponseBody
-    public Set<Offence> getAll(){
+    public List<Offence> getAll(){
         return service.getAll();
     }
 }

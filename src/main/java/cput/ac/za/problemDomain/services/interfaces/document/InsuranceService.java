@@ -5,4 +5,5 @@ import cput.ac.za.problemDomain.services.interfaces.GeneralService;
 
 public interface InsuranceService extends GeneralService<Insurance, String>{
 
+    Insurance retrieveByDescription(String description);
 }

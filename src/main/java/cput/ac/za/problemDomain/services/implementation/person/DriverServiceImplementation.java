@@ -1,13 +1,13 @@
 package cput.ac.za.problemDomain.services.implementation.person;
 
 import cput.ac.za.problemDomain.Repository.Interfaces.person.DriverRepository;
-import cput.ac.za.problemDomain.Repository.implementation.person.DriverRepositoryImplementation;
 import cput.ac.za.problemDomain.domain.person.Driver;
 import cput.ac.za.problemDomain.services.interfaces.person.DriverService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Set;
 
 @Service
@@ -19,7 +19,6 @@ public class DriverServiceImplementation implements DriverService {
     private static DriverServiceImplementation service = null;
 
     private DriverServiceImplementation() {
-        this.repository = DriverRepositoryImplementation.getRepository();
     }
 
     public static DriverServiceImplementation getService() {
@@ -50,7 +49,7 @@ public class DriverServiceImplementation implements DriverService {
     }
 
     @Override
-    public Set<Driver> getAll() {
+    public List<Driver> getAll() {
         return this.repository.getAll();
     }
 

@@ -1,11 +1,11 @@
 package cput.ac.za.problemDomain.services.implementation.feature;
 
 import cput.ac.za.problemDomain.Repository.Interfaces.feature.OffenceRepository;
-import cput.ac.za.problemDomain.Repository.implementation.feature.OffenceRepositoryImplementation;
 import cput.ac.za.problemDomain.domain.feature.Offence;
 import cput.ac.za.problemDomain.services.interfaces.feature.OffenceService;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Set;
 
 @Service
@@ -17,7 +17,6 @@ public class OffenceServiceImplementation implements OffenceService {
     private static OffenceServiceImplementation service = null;
 
     private OffenceServiceImplementation() {
-        this.repository = OffenceRepositoryImplementation.getRepository();
     }
 
     public static OffenceServiceImplementation getService() {
@@ -48,7 +47,7 @@ public class OffenceServiceImplementation implements OffenceService {
     }
 
     @Override
-    public Set<Offence> getAll() {
+    public List<Offence> getAll() {
         return this.repository.getAll();
     }
 

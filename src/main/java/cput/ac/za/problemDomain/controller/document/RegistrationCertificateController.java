@@ -6,7 +6,7 @@ import cput.ac.za.problemDomain.services.implementation.document.RegistrationCer
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Set;
+import java.util.List;
 
 @RestController
 @RequestMapping("/problemDomain/registrationcertificate")
@@ -25,7 +25,7 @@ public class RegistrationCertificateController {
 
     @GetMapping("/getall")
     @ResponseBody
-    public Set<RegistrationCertificate> getAll(){
+    public List<RegistrationCertificate> getAll(){
         return service.getAll();
     }
 }

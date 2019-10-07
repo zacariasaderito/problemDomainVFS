@@ -1,11 +1,11 @@
 package cput.ac.za.problemDomain.services.implementation.feature;
 
 import cput.ac.za.problemDomain.Repository.Interfaces.feature.TicketRepository;
-import cput.ac.za.problemDomain.Repository.implementation.feature.TicketRepositoryImplementation;
 import cput.ac.za.problemDomain.domain.feature.Ticket;
 import cput.ac.za.problemDomain.services.interfaces.feature.TicketService;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Set;
 
 @Service
@@ -17,7 +17,6 @@ public class TicketServiceImplementation implements TicketService {
     private static TicketServiceImplementation service = null;
 
     private TicketServiceImplementation() {
-        this.repository = TicketRepositoryImplementation.getRepository();
     }
 
     public static TicketServiceImplementation getService() {
@@ -48,7 +47,7 @@ public class TicketServiceImplementation implements TicketService {
     }
 
     @Override
-    public Set<Ticket> getAll() {
+    public List<Ticket> getAll() {
         return this.repository.getAll();
     }
 

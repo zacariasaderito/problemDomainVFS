@@ -8,6 +8,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -19,11 +20,11 @@ public class RegistrationCertificateRepositoryImplementationTest {
     private RegistrationCertificate registrationCertificate;
     private Map<String, RegistrationCertificate> insurances;
 
-    @Before
-    public void setUp() throws Exception {
-        this.repository = RegistrationCertificateRepositoryImplementation.getRepository();
+//    @Before
+//    public void setUp() throws Exception {
+//        this.repository = RegistrationCertificateRepositoryImplementation.getRepository();
 //        this.insurance = RegistrationCertificateFactory.getInsurance(200, "Not Payed", );
-    }
+//    }
 
     private RegistrationCertificate getSaved(){
         return this.repository.getAll().iterator().next();
@@ -71,7 +72,7 @@ public class RegistrationCertificateRepositoryImplementationTest {
 
     @Test
     public void getAll() {
-        Set<RegistrationCertificate> all = this.repository.getAll();
+        List<RegistrationCertificate> all = this.repository.getAll();
         System.out.println("In getAll, all = " + all);
     }
 }

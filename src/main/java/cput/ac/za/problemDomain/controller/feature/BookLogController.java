@@ -6,7 +6,7 @@ import cput.ac.za.problemDomain.services.implementation.feature.BookLogServiceIm
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Set;
+import java.util.List;
 
 @RestController
 @RequestMapping("/problemDomain/booklog")
@@ -25,7 +25,7 @@ public class BookLogController {
 
     @GetMapping("/getall")
     @ResponseBody
-    public Set<BookLog> getAll(){
+    public List<BookLog> getAll(){
         return service.getAll();
     }
 

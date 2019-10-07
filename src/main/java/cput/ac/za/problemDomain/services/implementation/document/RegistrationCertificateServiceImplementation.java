@@ -1,11 +1,11 @@
 package cput.ac.za.problemDomain.services.implementation.document;
 
 import cput.ac.za.problemDomain.Repository.Interfaces.document.RegistrationCertificateRepository;
-import cput.ac.za.problemDomain.Repository.implementation.document.RegistrationCertificateRepositoryImplementation;
 import cput.ac.za.problemDomain.domain.document.RegistrationCertificate;
 import cput.ac.za.problemDomain.services.interfaces.document.RegistrationCertificateService;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Set;
 
 @Service
@@ -16,9 +16,7 @@ public class RegistrationCertificateServiceImplementation implements Registratio
     private RegistrationCertificateRepository repository;
     private static RegistrationCertificateServiceImplementation service = null;
 
-    private RegistrationCertificateServiceImplementation() {
-        this.repository = RegistrationCertificateRepositoryImplementation.getRepository();
-    }
+    private RegistrationCertificateServiceImplementation() {}
 
     public static RegistrationCertificateServiceImplementation getService() {
         if (service == null)
@@ -48,7 +46,7 @@ public class RegistrationCertificateServiceImplementation implements Registratio
     }
 
     @Override
-    public Set<RegistrationCertificate> getAll() {
+    public List<RegistrationCertificate> getAll() {
         return this.repository.getAll();
     }
 

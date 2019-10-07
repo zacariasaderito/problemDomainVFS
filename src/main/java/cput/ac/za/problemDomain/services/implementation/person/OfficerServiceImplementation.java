@@ -1,11 +1,11 @@
 package cput.ac.za.problemDomain.services.implementation.person;
 
 import cput.ac.za.problemDomain.Repository.Interfaces.person.OfficerRepository;
-import cput.ac.za.problemDomain.Repository.implementation.person.OfficerRepositoryImplementation;
 import cput.ac.za.problemDomain.domain.person.Officer;
 import cput.ac.za.problemDomain.services.interfaces.person.OfficerService;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Set;
 
 @Service
@@ -16,7 +16,6 @@ public class OfficerServiceImplementation implements OfficerService {
     private static OfficerServiceImplementation service = null;
 
     private OfficerServiceImplementation() {
-        this.repository = OfficerRepositoryImplementation.getRepository();
     }
 
     public static OfficerServiceImplementation getService() {
@@ -48,7 +47,7 @@ public class OfficerServiceImplementation implements OfficerService {
     }
 
     @Override
-    public Set<Officer> getAll() {
+    public List<Officer> getAll() {
         return this.repository.getAll();
     }
 

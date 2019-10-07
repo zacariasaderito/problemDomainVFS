@@ -20,10 +20,6 @@
   <url>http://www.example.com</url>
 
   <properties>
-<!--    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>-->
-<!--    <maven.compiler.source>1.7</maven.compiler.source>-->
-<!--    <maven.compiler.target>1.7</maven.compiler.target>-->
-
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -31,15 +27,17 @@
   </properties>
 
   <dependencies>
-<!-- J Unit is removed / Commeted because it is built into Spring already-->
-<!--    <dependency>-->
-<!--      <groupId>junit</groupId>-->
-<!--      <artifactId>junit</artifactId>-->
-<!--      <version>4.11</version>-->
-<!--      <scope>test</scope>-->
-<!--    </dependency>-->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-jpa</artifactId>
+    </dependency>
+    <!-- WEB-->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-web</artifactId>
+      <version>5.2.0.RELEASE</version>
+    </dependency>
 
-    <!--  FOR SPRING-->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
@@ -58,6 +56,26 @@
       <artifactId>spring-boot-starter-test</artifactId>
       <version>2.1.4.RELEASE</version>
       <scope>test</scope>
+    </dependency>
+
+      <!-- SQL-->
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <scope>runtime</scope>
+    </dependency>
+
+      <!-- JPA-->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-autoconfigure</artifactId>
+      <version>2.1.4.RELEASE</version>
+    </dependency>
+<!--Hibernate-->
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-core</artifactId>
+      <version>5.3.9.Final</version>
     </dependency>
 
   </dependencies>

@@ -1,11 +1,11 @@
 package cput.ac.za.problemDomain.services.implementation.transport;
 
 import cput.ac.za.problemDomain.Repository.Interfaces.transport.VehicleRepository;
-import cput.ac.za.problemDomain.Repository.implementation.transport.VehicleRepositoryImplementation;
 import cput.ac.za.problemDomain.domain.transport.Vehicle;
 import cput.ac.za.problemDomain.services.interfaces.transport.VehicleService;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Set;
 
 @Service
@@ -17,7 +17,6 @@ public class VehicleServiceImplementation implements VehicleService {
     private static VehicleServiceImplementation service = null;
 
     private VehicleServiceImplementation() {
-        this.repository = VehicleRepositoryImplementation.getRepository();
     }
 
     public static VehicleServiceImplementation getService() {
@@ -48,7 +47,7 @@ public class VehicleServiceImplementation implements VehicleService {
     }
 
     @Override
-    public Set<Vehicle> getAll() {
+    public List<Vehicle> getAll() {
         return this.repository.getAll();
     }
 

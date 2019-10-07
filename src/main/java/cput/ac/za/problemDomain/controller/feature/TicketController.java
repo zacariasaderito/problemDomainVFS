@@ -6,7 +6,7 @@ import cput.ac.za.problemDomain.services.implementation.feature.TicketServiceImp
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Set;
+import java.util.List;
 
 @RestController
 @RequestMapping("/problemDomain/ticket")
@@ -25,7 +25,7 @@ public class TicketController {
 
     @GetMapping("/getall")
     @ResponseBody
-    public Set<Ticket> getAll(){
+    public List<Ticket> getAll(){
         return service.getAll();
     }
 }

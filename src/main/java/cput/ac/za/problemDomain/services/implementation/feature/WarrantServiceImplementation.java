@@ -1,11 +1,11 @@
 package cput.ac.za.problemDomain.services.implementation.feature;
 
 import cput.ac.za.problemDomain.Repository.Interfaces.feature.WarrantRepository;
-import cput.ac.za.problemDomain.Repository.implementation.feature.WarrantRepositoryImplementation;
 import cput.ac.za.problemDomain.domain.feature.Warrant;
 import cput.ac.za.problemDomain.services.interfaces.feature.WarrantService;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Set;
 
 @Service
@@ -17,7 +17,6 @@ public class WarrantServiceImplementation implements WarrantService {
     private static WarrantServiceImplementation service = null;
 
     private WarrantServiceImplementation() {
-        this.repository = WarrantRepositoryImplementation.getRepository();
     }
 
     public static WarrantServiceImplementation getService() {
@@ -48,7 +47,7 @@ public class WarrantServiceImplementation implements WarrantService {
     }
 
     @Override
-    public Set<Warrant> getAll() {
+    public List<Warrant> getAll() {
         return this.repository.getAll();
     }
 

@@ -1,9 +1,9 @@
 package cput.ac.za.problemDomain.domain.feature;
 
-public class Minor extends Offence{
+public class MajorOffence extends Offence{
 
     //  Default constructor
-    public Minor() {
+    public MajorOffence() {
     }
 
 }

@@ -6,7 +6,7 @@ import cput.ac.za.problemDomain.services.implementation.feature.TrialServiceImpl
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Set;
+import java.util.List;
 
 @RestController
 @RequestMapping("/problemDomain/trial")
@@ -24,7 +24,7 @@ public class TrialController {
 
     @GetMapping("/getall")
     @ResponseBody
-    public Set<Trial> getAll(){
+    public List<Trial> getAll(){
         return service.getAll();
     }
 

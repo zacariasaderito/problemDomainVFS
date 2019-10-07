@@ -1,24 +1,23 @@
 package cput.ac.za.problemDomain.services.implementation.document;
 
 import cput.ac.za.problemDomain.Repository.Interfaces.document.RoadTaxRepository;
-import cput.ac.za.problemDomain.Repository.implementation.document.RoadTaxRepositoryImplementation;
 import cput.ac.za.problemDomain.domain.document.RoadTax;
 import cput.ac.za.problemDomain.services.interfaces.document.RoadTaxService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Set;
 
 @Service
 public class RoadTaxServiceImplementation implements RoadTaxService {
 
-    //    @Autowired
-//    @Qualifier("InMemory")
+    @Autowired
     private RoadTaxRepository repository;
     private static RoadTaxServiceImplementation service = null;
 
     private RoadTaxServiceImplementation() {
-        this.repository = RoadTaxRepositoryImplementation.getRepository();
-    }
+   }
 
     public static RoadTaxServiceImplementation getService() {
         if (service == null)
@@ -48,7 +47,7 @@ public class RoadTaxServiceImplementation implements RoadTaxService {
     }
 
     @Override
-    public Set<RoadTax> getAll() {
+    public List<RoadTax> getAll() {
         return this.repository.getAll();
     }
 
